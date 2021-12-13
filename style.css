@@ -1,0 +1,20 @@
+*{
+  border: tomato thin solid;
+}
+footer{
+  height: 250px;
+  background-image: url(images/desktop/image-gallery-milkbottles.jpg);
+}
+
+footer > h3{
+  
+}
+
+#yumurta{
+  background-color: yellow;
+  border: none;
+}
+
+.beyaz{
+  background-color: white;
+}

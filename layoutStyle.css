@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 200px;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;  
+}
+body > *{
+    
+    background-color: powderblue;
+}
+
+header{
+    grid-area: header;
+    /*
+    background-color: #3DBEFF;
+    background-image: url(images/logo-header.svg);
+    background-repeat: no-repeat;
+    background-position: 50px center;
+    background-size: 20%;
+    */
+    background: #3DBEFF url(images/logo-header.svg) no-repeat 50px center / 20% ;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header > ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin-right: 50px;
+}
+header > ul > li{
+    margin: 10px;
+}
+header > ul > li > a{
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+}
+header > ul > li > a:hover{
+    text-decoration: underline;
+}
+header > ul > li > a.secilen{
+    background-color: #fff;
+    color: black;
+    text-transform: uppercase;
+    border-radius: 15px;
+    padding: 5px;
+    text-decoration: none;
+}
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+}
+
+main > section{
+    height: auto;
+    flex: 1;
+}
+
+#yumurta{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#bardak{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.aciklama{
+    flex: 1 1 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.aciklama > h4{
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.aciklama > a{
+    align-self: flex-start;
+    margin-top: 16px;
+    text-decoration-color: yellow;
+    text-decoration-thickness: 5px;
+    text-transform: uppercase;
+    color: #000;
+    letter-spacing: 5px;
+    font-weight: bolder;
+    text-shadow: 5px 5px 5px grey;
+}
+
+.aciklama > p {
+    line-height: 25px;
+}
+#yumurta > img{
+    max-width: 500px;
+    flex: 0 1 50%;
+}
+#bardak > img{
+    flex:  1 1 50%;
+}
+#intro {
+    background-color: #3ebfff;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 80px;
+}
+#intro > h3{
+    color: #fff;
+    font-size: 48px;
+    font-family: 'Acme', sans-serif;
+}
+.ok{
+    margin-bottom: -160px;
+    z-index: 99;
+}
+footer{
+    grid-area: footer;
+}
