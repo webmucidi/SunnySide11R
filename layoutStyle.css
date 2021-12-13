@@ -112,12 +112,14 @@ main > section{
 .aciklama > p {
     line-height: 25px;
 }
-#yumurta > img{
-    max-width: 500px;
-    flex: 0 1 50%;
-}
-#bardak > img{
+.resim{
     flex:  1 1 50%;
+    padding: 0;
+}
+.resim > img{
+    width: 100%;
+    height: 100%;
+    
 }
 #intro {
     background-color: #3ebfff;
