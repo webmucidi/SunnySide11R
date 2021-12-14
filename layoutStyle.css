@@ -71,6 +71,16 @@ main > section{
     flex: 1;
 }
 
+section > div{
+    flex: 1 1 50%;
+    min-height: 60vh;
+    position: relative;
+}
+
+section > div > img{
+    width: 100%;
+    height: 100%;
+}
 #yumurta{
     display: flex;
     flex-direction: row;
@@ -83,7 +93,6 @@ main > section{
     flex-wrap: nowrap;
 }
 .aciklama{
-    flex: 1 1 50%;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -112,14 +121,46 @@ main > section{
 .aciklama > p {
     line-height: 25px;
 }
-.resim{
-    flex:  1 1 50%;
-    padding: 0;
-}
+
 .resim > img{
     width: 100%;
     height: 100%;
+}
+#meyveler{
+    display: flex;
+}
+.kiraz{
+    z-index: 1001;
+}
+.kiraz, .mandalina{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding:  2vh 8vw;
     
+}
+
+.kiraz::before{
+    content: ' ';
+    background: url(images/desktop/kiraz.jpg) no-repeat center top/cover ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+
+}
+.mandalina::before{
+    content: ' ';
+    background: url(images/desktop/mandalina.jpg) no-repeat center top/cover ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
 }
 #intro {
     background-color: #3ebfff;
@@ -138,6 +179,29 @@ main > section{
 .ok{
     margin-bottom: -160px;
     z-index: 99;
+}
+#musteriler{
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: cornsilk;
+    
+}
+#musteriler > h1{
+    grid-column: 1/span 3;
+    align-self: center;
+    justify-self: center;
+}
+.musteri{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.musteri > img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
 }
 footer{
     grid-area: footer;
