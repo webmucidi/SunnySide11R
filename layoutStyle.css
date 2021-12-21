@@ -1,11 +1,16 @@
+html{
+    font-size: 62.5%;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 2rem;
 }
 
 body{
     min-height: 100vh;
+    
     height: auto;
     display: grid;
     grid-template-columns: 1fr;
@@ -29,17 +34,21 @@ header{
     background-repeat: no-repeat;
     background-position: 50px center;
     background-size: 20%;
-    */
+    
     background: #3DBEFF url(images/logo-header.svg) no-repeat 50px center / 20% ;
+    */
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+}
+header > img{
+    margin-left: 10vw;
 }
 header > ul{
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    margin-right: 50px;
+    margin-right: 10vw;
 }
 header > ul > li{
     margin: 10px;
@@ -48,6 +57,7 @@ header > ul > li > a{
     color: #fff;
     font-family: 'Ubuntu', sans-serif;
     text-decoration: none;
+
 }
 header > ul > li > a:hover{
     text-decoration: underline;
@@ -169,14 +179,22 @@ section > div > img{
     align-items: center;
     justify-content: flex-end;
     padding-top: 80px;
+    
 }
 #intro > h3{
     color: #fff;
-    font-size: 48px;
+    font-size: 4rem;
     font-family: 'Acme', sans-serif;
+    z-index: 100;
 }
-.ok{
-    margin-bottom: -160px;
+#intro > img{
+    width: 50%;
+}
+#intro > img:nth-child(2){
+    display: inline-block;
+    max-width: 5rem;
+    flex: 1;
+    margin-bottom: -10%;
     z-index: 99;
 }
 #musteriler{
@@ -242,4 +260,21 @@ footer{
     gap: 1vw;
 }
 
+@media (max-width: 600px){
+    header{
+        flex-direction: column;
+        justify-content: flex-end;  
+    }
+    header > img{
+        width: 40%;
+        margin-inline: auto;
+    }
+    header > ul{
+        margin-inline: auto;
+    }
+    #intro > img{
+        width: 80%;
+    }
 
+
+}
